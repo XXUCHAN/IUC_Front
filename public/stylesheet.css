@@ -1,0 +1,74 @@
+html,
+body{
+    height: 100%;
+    background-color: gray;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+.top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.search{
+    position: relative;
+    width: 50%;
+ }
+.side_bar{
+    width: 15%;
+    height: 100%;
+    background-color: white;
+    flex-direction: column;
+    justify-content: center; /* 세로 중앙 정렬 */
+    align-items: center; /* 가로 중앙 정렬 */
+    padding: 20px
+}
+.menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+.main-title{
+    padding: 30px;
+    text-align: center;
+    text-justify: auto;
+    color:blue;
+    font-weight: bold;
+}
+.menu-item {
+    background-color: white;
+    padding: 15px;
+    text-align: left;
+    border-radius: 5px;
+    border: none; 
+    cursor: pointer;
+    color: rgb(145, 144, 144);
+}
+.menu-item:hover{
+    background: rgb(151, 226, 255);
+    color:rgb(93, 202, 245);
+}
+.dash_board{
+    width: 85%;
+    height: 100%;
+    background-color: rgb(246, 246, 246);
+}
+input{
+    width: 100%;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+}
+  
+img{
+    position : absolute;
+    width: 17px;
+    top: 10px;
+    right: 12px;
+    margin: 0;
+}
