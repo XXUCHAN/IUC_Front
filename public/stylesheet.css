@@ -7,18 +7,117 @@ body{
     display: flex;
     flex-direction: row;
     height: 100%;
+    width: 100%;
 }
-.top{
+.etc{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    
 }
-.search{
-    position: relative;
-    width: 50%;
- }
+.dash_board{
+    width: 85%;
+    height: 100%;
+    background-color: rgb(246, 246, 246);
+}
+.contents{
+    height: 100%;
+    margin: 2%;
+}
+.top-contents-container{
+    display: flex;
+    justify-items:space-between;
+    height: 14%;
+    margin-bottom: 2%;
+    gap: 0 2%;
+}
+.top-contents{
+    height: 100%;
+    width: 23.5%;
+    display: flex;
+    border-radius: 10px;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+}
+.top-contents-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin: 10%;
+}
+.page-title{
+    display: flex;
+    justify-content: left;
+    padding-bottom: 1%;
+}
+.middle-contents-container{
+    display: flex;
+    height: 42%;
+    justify-content: space-between;
+    gap: 0 2%;
+}
+.middle-contents-1{
+    width:74.5%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: white;
+}
+.middle-contents-2{
+    width: 23.5%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: white;
+}
+.bottom-contents-container{
+    height: 28%;
+    display: flex;
+    padding-top: 2%;
+    justify-content: space-between;
+    gap: 0 2%;
+}
+.bottom-contents-1{
+    width: 30%;
+    height: 84%;
+    
+    border-radius: 10px;
+    background-color: white;
+}
+.bottom-contents-2{
+    border-radius: 10px;
+    width: 42.5%;
+    height: 84%;
+ 
+    background-color: white;
+}
+.bottom-contents-3{
+    border-radius: 10px;
+    width: 23.5%;
+    height: 84%;
+    
+    background-color: white;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 0 20px;
+}
+.info-button{
+    border: none;
+    background-color: rgb(246, 246, 246);
+    cursor: pointer;
+}
+.info-img{
+    height: 20px;
+    width: 20px;
+}
+.info-button:hover .info-img{
+    filter: brightness(0) saturate(100%) invert(32%) sepia(94%) saturate(2173%) hue-rotate(201deg);
+}
 .side_bar{
-    width: 15%;
+    width: 12%;
     height: 100%;
     background-color: white;
     flex-direction: column;
@@ -30,7 +129,7 @@ body{
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 10px; 
+    
 }
 .main-title{
     padding: 30px;
@@ -39,36 +138,78 @@ body{
     color:blue;
     font-weight: bold;
 }
+
 .menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: left;
     background-color: white;
-    padding: 15px;
+    padding: 5px;
     text-align: left;
     border-radius: 5px;
     border: none; 
     cursor: pointer;
     color: rgb(145, 144, 144);
+    height: 40px;
+    
 }
 .menu-item:hover{
-    background: rgb(151, 226, 255);
-    color:rgb(93, 202, 245);
+    background: rgb(198, 213, 245);
+    color:blue;
 }
-.dash_board{
-    width: 85%;
-    height: 100%;
-    background-color: rgb(246, 246, 246);
+
+.menu-text{
+    position: relative;
+    left:10px;
 }
+.menu-img{
+    height: 20px;
+    width: 20px;
+}
+
+
 input{
     width: 100%;
-    border: 1px solid #bbb;
-    border-radius: 8px;
+    background-color: rgb(220, 214, 248);
+    border: none;
     padding: 10px 12px;
     font-size: 14px;
+    margin: 15px;
 }
-  
-img{
-    position : absolute;
-    width: 17px;
-    top: 10px;
-    right: 12px;
-    margin: 0;
+
+.search{
+    width: 50%;
+    gap: 0 10px;
+}
+
+.search-img{
+    padding:15px;
+    width: 20px;
+    height: 20px;
+}
+.search-container{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: rgb(220, 214, 248);
+}
+.user{
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+    padding-right: 30px;
+}
+.user-img{
+    height: 40px;
+    width: 40px;
+    border-radius: 80%;
+}
+.sns{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
 }
