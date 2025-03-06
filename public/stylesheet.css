@@ -238,7 +238,7 @@ body {
 .inputList input{
     color: black;
     margin-left:  15px;
-    width: 30%;
+    width: 50%;
     height: 30px;
     border: black;
     border-color: black;
@@ -261,7 +261,7 @@ body {
     width: 25px;
     height: 25px;
 }
-.Done{
+.completedTask{
     width: 50%; 
     max-height: 300px; 
     overflow-y: auto; /* 스크롤 가능하게 설정 */
@@ -269,7 +269,7 @@ body {
     padding: 10px;
     border-radius: 5px;
 }
-.Done li{
+.completedTask li{
     width: 100%;
     list-style: none;
     line-height: 40px;
@@ -314,4 +314,25 @@ body {
     cursor: pointer;
     justify-content: left;
     margin-left: 15px;
+}
+
+.del-button{
+    font-size: 20px;
+    border: none;
+    float: right;
+    right: 17px;
+    margin-top: 10px;
+    cursor: pointer;
+    position:relative;
+}
+
+.check-button {
+    font-size: 20px;
+    border: none;
+    float: right;
+    right: 17px;
+    margin-top: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    position: relative;
 }

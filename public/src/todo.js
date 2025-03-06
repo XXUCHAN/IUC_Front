@@ -4,11 +4,11 @@ let result = document.getElementById('result');    // 추가된 할 일 목록
 let check_result = document.getElementById('check_result'); // 완료된 목록
 
 let todos = [];
+let done = [];
 
 // 초기화
 const init = () => {
     const userTodos = JSON.parse(localStorage.getItem('todos'));
-    
     if(userTodos){
         userTodos.forEach(todo => addTodo(todo.text, todo.id, true));
         todos = userTodos;
@@ -19,6 +19,11 @@ const init = () => {
 const save = () => {
     localStorage.setItem('todos', JSON.stringify(todos));
 };
+
+const save_done = () =>{
+    localStorage.setItem('done', JSON.stringify(done));
+}
+
 
 // 할 일 추가 함수
 function addTodo(text, id = Date.now(), fromStorage = false) {
@@ -37,25 +42,12 @@ function addTodo(text, id = Date.now(), fromStorage = false) {
     let del = document.createElement('button');
     let check = document.createElement('button');
 
-    del.innerText = "x";
-    del.style.fontSize = "20px";
-    del.style.border = "none";
-    del.style.float = "right";
-    del.style.right = "17px";
-    del.style.marginTop = "10px";
-    del.style.cursor = "pointer";
-    del.style.position = 'relative';
+    del.innerText = "X";
+    del.classList.add("del-button"); // 클래스 추가
     del.addEventListener("click", deleteList);
 
-    check.innerText = "v";
-    check.style.fontSize = "20px";
-    check.style.border = "none";
-    check.style.float = "right";
-    check.style.right = "17px";
-    check.style.marginTop = "10px";
-    check.style.marginRight = "5px";
-    check.style.cursor = "pointer";
-    check.style.position = "relative";
+    check.innerText = "V";
+    check.classList.add("check-button");
     check.addEventListener("click", completeTodo);
 
     list.appendChild(del);
@@ -69,6 +61,7 @@ btn.addEventListener("click", () => {
     addValue.value = ""; // 입력 필드 초기화
 });
 
+
 // 할 일 삭제 함수
 function deleteList(e) { 
     let target = e.target.parentElement;
@@ -81,10 +74,14 @@ function deleteList(e) {
 function completeTodo(e) {
     if (confirm("완료 하셨습니까?")) {
         let completedTask = e.target.parentElement;
-        check_result.appendChild(completedTask);
-
-        todos = todos.filter(todo => todo.id !== parseInt(completedTask.id));
-        save();
+        let id = completedTask.id;
+        let text  = completedTask.innerText;
+        const task = { id,text};
+        done.push(task);
+        done = done.filter(done => done.id !== parseInt(id));
+        console.log(text);
+        save_done();
+        deleteList(e);
     }
 }
 
