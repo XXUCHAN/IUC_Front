@@ -88,14 +88,16 @@
                     </div>
                     <div class="middle-contents-container">
                         <div class="middle-contents-1">
-                            <header style="margin: 20px;">TodoList</header>        
+                            <header style="margin: 20px;font-weight: 700; font-size: x-large;">TodoList</header>        
                             <div class="inputList">
                                 <input type="text" id="addValue" placeholder="할 일 추가하기" autofocus/><!--자동포커스-->
                                 <button type="button" id = "btn">
                                     <img class="check-img" src="/image/add.png" alt="Error">
                                 </button>
                                 <div class="flush">
-                                    <button type="button" id = "allClear" onclick="allClearList()">del</button>
+                                    <button type="button" id = "allClear" onclick="allClearList()">
+                                        <i class="fa-solid fa-eraser" style="background-color: rgb(220, 214, 248); "></i>
+                                    </button>
                                 </div>
                             </div>
                             
@@ -106,7 +108,7 @@
                                 
                             </div>
                         </div>
-                        <script src="/src/todo.js"></script>
+                        
                         <div class="middle-contents-2">
                             <div style="margin: 20px; font-weight: 700; font-size: x-large;">
                                 <header style="margin: 20px;">completedTask</header>  
@@ -118,6 +120,7 @@
                             </div>
                            
                         </div>
+                        <script src="/src/todo.js"></script>
                     </div>
                     <div class="bottom-contents-container">
                         <div class="bottom-contents-1">
